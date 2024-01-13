@@ -25,7 +25,7 @@ locals{
 
 module "mysql_rds" {
     source = "git@github.com:ShaiHalfon96/terraform-create-aws-rds-module.git?ref=master"
-    identifier                = "mars-global-products-mysql"
+    identifier                = "mysql-instance"
     username                  = "admin"
     vpc_id                    = data.aws_eks_cluster.cluster.vpc_config[0].vpc_id
     subnet_ids                = data.aws_eks_cluster.cluster.vpc_config[0].subnet_ids
